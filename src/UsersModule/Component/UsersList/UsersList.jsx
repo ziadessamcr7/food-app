@@ -169,7 +169,7 @@ export default function UsersList() {
                         <th className='t-h py-3 rounded-start-4 ' scope="col">#</th>
                         <th className='t-h py-3' scope="col">Name</th>
                         <th className='t-h py-3' scope="col">Image</th>
-                        <th className='t-h py-3' scope="col">Phone</th>
+
                         <th className='t-h py-3' scope="col">Role</th>
                         <th className='t-h py-3' scope="col">Email</th>
                         <th className='t-h py-3 rounded-end-4' scope="col">Actions</th>
@@ -184,7 +184,7 @@ export default function UsersList() {
                             {user.imagePath ? <td>
                                 {<img src={`https://upskilling-egypt.com:443/` + user.imagePath} className='recipe-img' alt="" />}
                             </td> : <td> <img src={avatar} className='noUser-img' alt="" /> </td>}
-                            <td> {user.phoneNumber} </td>
+
                             <td> {user.group.name} </td>
                             <td> {user.email} </td>
                             <td>

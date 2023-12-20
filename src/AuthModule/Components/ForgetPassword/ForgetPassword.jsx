@@ -75,7 +75,7 @@ export default function ForgetPassword() {
 
                             <button className='btn btn-success d-flex justify-content-center w-100 mt-4 fw-bolder'>
                                 {loading === true ? <i className='fa-solid fa-spin fa-spinner py-1'></i>
-                                    : 'Login'}
+                                    : 'send'}
 
 
                             </button>

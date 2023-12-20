@@ -34,6 +34,7 @@
 
 .bg-darkBlue {
     background-color: rgba(31, 38, 62, 1);
+    border-top-right-radius: 50px;
 }
 
 .box {
@@ -54,6 +55,12 @@
     height: 35px;
     border-radius: 50%;
 }
+
+.chef-hat {
+    width: 100px;
+    height: 100px;
+}
+
 
 .header-container {
     background-image: url('../src/assets/imgs/Header1.png');
@@ -83,7 +90,7 @@
 }
 
 .container-fluid {
-    /* padding-left: 0 !important; */
+    padding-left: 0 !important;
     /* padding-right: 0 !important; */
 }
 
@@ -146,6 +153,11 @@
 
     }
 
+    .container-fluid {
+        padding-left: 10px !important;
+        /* padding-right: 0 !important; */
+    }
+
 }
 
 @media (max-width: 945px) {
@@ -174,5 +186,6 @@
         --bs-pagination-padding-x: 0.45rem;
         --bs-pagination-padding-y: 0.45rem;
     }
+
 
 }

@@ -50,6 +50,7 @@ export default function Login({ saveAdminData }) {
 
                 localStorage.setItem('adminToken', response.data.token)
                 setloading(false)
+                saveAdminData()
             })
             .catch(function (error) {
                 console.log('errorrr', error.response.data.message);
@@ -111,8 +112,8 @@ export default function Login({ saveAdminData }) {
 
                             {errors.password && errors.password.type === 'required' &&
                                 <span className='text-danger'>Password is required</span>}
-                            <div className='d-flex justify-content-between w-100'>
-                                <span className="fw-medium">Register Now?</span>
+                            <div className='d-flex justify-content-end w-100'>
+
                                 <Link to={'/forget-pass'} className='text-success' style={{ cursor: 'pointer' }} >Forgot Password?</Link>
                             </div>
                             <button className='btn btn-success d-flex justify-content-center w-100 mt-4 fw-bolder'>

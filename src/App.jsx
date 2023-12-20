@@ -61,7 +61,7 @@ function App() {
       </ProtectedRoute>,
       errorElement: <NotFound />,
       children: [
-        { path: '', element: <Home /> },
+        { path: '', element: <Home adminData={adminData} /> },
         { path: 'home', element: <Home /> },
         { path: 'users', element: <UsersList /> },
         { path: 'categories', element: <CategoriesList /> },

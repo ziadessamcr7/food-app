@@ -205,7 +205,7 @@ export default function RecipesList() {
 
     const handlPageChange = (data) => {
         let currentPage = data.selected + 1
-        getRecipesList(currentPage, null, null)
+        getRecipesList(currentPage, searchString, searchTag, searchCat)
     }
 
 
@@ -349,7 +349,7 @@ export default function RecipesList() {
                         })} >
                             <option selected disabled>choose tag</option>
                             {tagList?.map((tag) => {
-                                return <option value={tag.id}> {tag.name} {tag.id} </option>
+                                return <option value={tag.id}> {tag.name} </option>
                             })}
                         </select>
                         {errors.tagId && errors.tagId.type == 'required'
@@ -359,15 +359,15 @@ export default function RecipesList() {
 
                         <label className='fw-bold ms-1 mt-2' htmlFor="categoriesIds">category:</label>
                         <select id="categoriesIds" className='form-select' {...register('categoriesIds', {
-                            required: true,
+                            // required: true,
                             // pattern: /^[0-9]{1,4}$/,
                         })}>
                             <option selected disabled>choose category</option>
                             {categoryList?.map((category) => {
-                                return <option value={category.id}> {category.name} {category.id} </option>
+                                return <option value={category.id}> {category.name}  </option>
                             })}
                         </select>
-                        {errors.categoriesIds && <span className='text-danger d-block'>field required</span>}
+                        {/* {errors.categoriesIds && <span className='text-danger d-block'>field required</span>} */}
                         {/* {errors.categoriesIds && errors.categoriesIds.type == 'pattern'
                             && <span className='text-danger d-block'>enter an id</span>} */}
 

@@ -4,6 +4,8 @@ import { Sidebar, Menu, MenuItem, SubMenu } from 'react-pro-sidebar'
 import Modal from 'react-bootstrap/Modal';
 import ChangePassword from '../../../AuthModule/Components/ChangePassword/ChangePassword';
 import menuLogo from '../../../assets/imgs/3.jpg'
+import chefHat from '../../../assets/imgs/3.png'
+
 
 export default function SideBar() {
 
@@ -37,7 +39,7 @@ export default function SideBar() {
         <div className='side-bar'>
             <Sidebar collapsed={isCollapsed}
                 backgroundColor='rgba(31, 38, 62, 1)'
-                className='text-white vh-100'>
+                className='text-white vh-100 mt-5 pt-5'>
                 <Menu className='' >
 
                     <Modal show={show} onHide={handleClose}>
@@ -45,7 +47,9 @@ export default function SideBar() {
                     </Modal>
 
                     <MenuItem onClick={handleToggle}
-                        icon={<i className="fa fa-bars d-block"></i>}></MenuItem>
+                        className='text-start' icon={<img src={chefHat} className='chef-hat' alt="" />} >
+                    </MenuItem>
+
                     <MenuItem title='dashboard' icon={<i className="fa fa-home" ></i>}
                         component={<Link to="/dashboard" />}> Home
                     </MenuItem>

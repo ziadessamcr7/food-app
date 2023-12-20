@@ -4,7 +4,7 @@ import headerPic from '../../../assets/imgs/eating vegan food-rafiki (1).png'
 import { Link } from 'react-router-dom'
 
 
-export default function Home() {
+export default function Home({ adminData }) {
     return (
         <section className='home vh-100 overflow-hidden'>
             <Header >
@@ -12,7 +12,7 @@ export default function Home() {
                     <div className="row align-items-center">
                         <div className="col-sm-9">
                             <div className='p-3'>
-                                <h1>Welcome <span className='fw-lighter'>Upskilling!</span> </h1>
+                                <h1>Welcome Admin!  <span className='fw-lighter'> {adminData?.userName} </span> </h1>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos,
                                     <br></br> necessitatibus. Lorem ipsum dolor sit amet consectetur
                                     adipisicing elit. Rem, officia!

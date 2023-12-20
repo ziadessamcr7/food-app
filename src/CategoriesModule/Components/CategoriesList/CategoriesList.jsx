@@ -60,12 +60,12 @@ export default function CategoriesList() {
             }
         }).then((response) => {
             console.log(response)
-            setTimeout(() => {
-                handleClose()
-            }, 4000);
+
+            handleClose()
+
             getCategoriesList()
             setLoading(false)
-            document.querySelector('#name').value = 'hambozo'
+            // document.querySelector('#name').value = 'hambozo'
             toast.success('Category Added Successfully', {
                 autoClose: 3000
             })
@@ -151,7 +151,7 @@ export default function CategoriesList() {
 
     const handlPageChange = (data) => {
         let currentPage = data.selected + 1
-        getCategoriesList(currentPage)
+        getCategoriesList(currentPage, searchString)
     }
 
 

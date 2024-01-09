@@ -96,7 +96,7 @@ export default function UsersList() {
 
     const handlPageChange = (data) => {
         let currentPage = data.selected + 1
-        getAllUsers(currentPage, null, null)
+        getAllUsers(currentPage)
     }
 
 

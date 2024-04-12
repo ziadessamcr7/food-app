@@ -27,7 +27,7 @@ export default function ResetPassword() {
     const onSubmit = (data) => {
         console.log(data)
         setLoading(true)
-        axios.post('https://upskilling-egypt.com:443/api/v1/Users/Reset', data)
+        axios.post('https://upskilling-egypt.com:3006/api/v1/Users/Reset', data)
             .then(function (response) {
                 toast.success(response.data.message)
                 console.log(response);

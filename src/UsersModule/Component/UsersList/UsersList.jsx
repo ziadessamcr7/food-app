@@ -44,7 +44,7 @@ export default function UsersList() {
 
 
     const getAllUsers = (pageNum, name, mail) => {
-        axios.get(`https://upskilling-egypt.com:443/api/v1/Users/`, {
+        axios.get(`https://upskilling-egypt.com:3006/api/v1/Users/`, {
             headers: { Authorization: `Bearer ${localStorage.getItem('adminToken')}` },
             params: {
                 pageSize: 5,
@@ -65,7 +65,7 @@ export default function UsersList() {
 
     const deleteUser = () => {
         setLoading(true)
-        axios.delete(`https://upskilling-egypt.com:443/api/v1/Users/${userId}`, {
+        axios.delete(`https://upskilling-egypt.com:3006/api/v1/Users/${userId}`, {
             headers: { Authorization: `Bearer ${localStorage.getItem('adminToken')}` }
         }).then((response) => {
             console.log(response)

@@ -20,7 +20,7 @@ export default function ChangePassword({ handleClose }) {
 
     const formSubmit = (data) => {
         setLoading(true)
-        axios.put('https://upskilling-egypt.com:443/api/v1/Users/ChangePassword', data, {
+        axios.put('https://upskilling-egypt.com:3006/api/v1/Users/ChangePassword', data, {
             headers: { Authorization: `Bearer ${localStorage.getItem('adminToken')}` }
         }).then((response) => {
             console.log(response)

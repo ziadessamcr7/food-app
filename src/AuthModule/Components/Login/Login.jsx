@@ -40,7 +40,7 @@ export default function Login({ saveAdminData }) {
 
         setloading(true)
 
-        axios.post('https://upskilling-egypt.com:443/api/v1/Users/Login', data)
+        axios.post('https://upskilling-egypt.com:3006/api/v1/Users/Login', data)
             .then(function (response) {
                 toast.success('Login success', {
                     autoClose: 2000

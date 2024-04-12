@@ -25,7 +25,7 @@ export default function ForgetPassword() {
 
         setloading(true)
 
-        axios.post('https://upskilling-egypt.com:443/api/v1/Users/Reset/Request', data)
+        axios.post('https://upskilling-egypt.com:3006/api/v1/Users/Reset/Request', data)
             .then(function (response) {
                 toast.success(response.data.message)
                 console.log(response);

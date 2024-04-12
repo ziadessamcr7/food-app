@@ -83,7 +83,7 @@ export default function RecipesList() {
 
         setLoading(true)
 
-        axios.post('https://upskilling-egypt.com:443/api/v1/Recipe/', { ...data, recipeImage: data.recipeImage[0] }, {
+        axios.post('https://upskilling-egypt.com:3006/api/v1/Recipe/', { ...data, recipeImage: data.recipeImage[0] }, {
             headers: {
                 Authorization: `Bearer ${localStorage.getItem('adminToken')}`,
                 "content-type": "multipart/form-data"
@@ -104,7 +104,7 @@ export default function RecipesList() {
     }
 
     const getCategoriesList = () => {
-        axios.get('https://upskilling-egypt.com:443/api/v1/Category/?pageSize=20&pageNumber=1', {
+        axios.get('https://upskilling-egypt.com:3006/api/v1/Category/?pageSize=20&pageNumber=1', {
             headers: { Authorization: `Bearer ${localStorage.getItem('adminToken')}` }
         }).then((response) => {
             console.log(response)
@@ -115,7 +115,7 @@ export default function RecipesList() {
     }
 
     const getAllTags = () => {
-        axios.get('https://upskilling-egypt.com:443/api/v1/tag/', {
+        axios.get('https://upskilling-egypt.com:3006/api/v1/tag/', {
             headers: { Authorization: `Bearer ${localStorage.getItem('adminToken')}` }
         }).then((response) => {
             console.log(response.data)
@@ -126,7 +126,7 @@ export default function RecipesList() {
     }
 
     const getRecipesList = (pageNum, searchName, tagId, catId) => {
-        axios.get('https://upskilling-egypt.com:443/api/v1/Recipe/?', {
+        axios.get('https://upskilling-egypt.com:3006/api/v1/Recipe/?', {
             headers: { Authorization: `Bearer ${localStorage.getItem('adminToken')}` },
             params: {
                 pageSize: 4,
@@ -147,7 +147,7 @@ export default function RecipesList() {
 
     const deleteRecipe = () => {
         setLoading(true)
-        axios.delete(`https://upskilling-egypt.com:443/api/v1/Recipe/${recipeId}`, {
+        axios.delete(`https://upskilling-egypt.com:3006/api/v1/Recipe/${recipeId}`, {
             headers: { Authorization: `Bearer ${localStorage.getItem('adminToken')}` }
         }).then((response) => {
             toast.success('Deleted Successfully', {
@@ -168,7 +168,7 @@ export default function RecipesList() {
     const updateRecipe = (data) => {
         console.log(data)
         setLoading(true)
-        axios.put(`https://upskilling-egypt.com:443/api/v1/Recipe/${recipeId}`, { ...data, recipeImage: data.recipeImage[0] }, {
+        axios.put(`https://upskilling-egypt.com:3006/api/v1/Recipe/${recipeId}`, { ...data, recipeImage: data.recipeImage[0] }, {
             headers: {
                 Authorization: `Bearer ${localStorage.getItem('adminToken')}`,
                 "content-type": "multipart/form-data"

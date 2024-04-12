@@ -54,7 +54,7 @@ export default function CategoriesList() {
     const submitForm = (data) => {
         setLoading(true)
 
-        axios.post('https://upskilling-egypt.com:443/api/v1/Category/', data, {
+        axios.post('https://upskilling-egypt.com:3006/api/v1/Category/', data, {
             headers: {
                 Authorization: `Bearer ${localStorage.getItem('adminToken')}`
             }
@@ -79,7 +79,7 @@ export default function CategoriesList() {
     }
 
     const getCategoriesList = (pageNum, searchName) => {
-        axios.get('https://upskilling-egypt.com:443/api/v1/Category/', {
+        axios.get('https://upskilling-egypt.com:3006/api/v1/Category/', {
             headers: { Authorization: `Bearer ${localStorage.getItem('adminToken')}` },
             params: {
                 pageSize: 5,
@@ -109,7 +109,7 @@ export default function CategoriesList() {
 
     const deleteCategory = () => {
         setLoading(true)
-        axios.delete(`https://upskilling-egypt.com:443/api/v1/Category/${categoryId}`, {
+        axios.delete(`https://upskilling-egypt.com:3006/api/v1/Category/${categoryId}`, {
             headers: { Authorization: `Bearer ${localStorage.getItem('adminToken')}` }
         }).then((response) => {
             console.log(response)
@@ -130,7 +130,7 @@ export default function CategoriesList() {
     const updateCategory = (data) => {
         setLoading(true)
         console.log('bizo', data)
-        axios.put(`https://upskilling-egypt.com:443/api/v1/Category/${categoryId}`, data, {
+        axios.put(`https://upskilling-egypt.com:3006/api/v1/Category/${categoryId}`, data, {
             headers: {
                 Authorization: `Bearer ${localStorage.getItem('adminToken')}`
             }

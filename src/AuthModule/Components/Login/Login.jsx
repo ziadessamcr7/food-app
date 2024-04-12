@@ -86,6 +86,7 @@ export default function Login({ saveAdminData }) {
                                     id="email"
                                     placeholder='Enter your e-mail'
                                     className='form-control mx-auto'
+                                    value="ziadessamcr7@gmail.com"
                                     {...register('email', {
                                         required: true,
                                         pattern: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/
@@ -105,6 +106,7 @@ export default function Login({ saveAdminData }) {
                                     id="password"
                                     placeholder='Password'
                                     className='form-control mx-auto'
+                                    value="Zizo1234!"
                                     {...register('password', {
                                         required: true,
                                     })} />

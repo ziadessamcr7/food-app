@@ -375,7 +375,7 @@ export default function RecipesList() {
                         <input type="file" className='form-control' {...register('recipeImage')} />
 
 
-                        <img src={`https://upskilling-egypt.com:443/` + recipeObj?.imagePath}
+                        <img src={`https://upskilling-egypt.com:3006/` + recipeObj?.imagePath}
                             className='recipe-img d-block m-auto' alt="no-img" />
 
 
@@ -471,7 +471,7 @@ export default function RecipesList() {
                             <th scope="row"> {idx + 1} </th>
                             <td >{recipe.name}</td>
                             {recipe.imagePath ? <td>
-                                <img src={'https://upskilling-egypt.com:443/' + recipe.imagePath} className='recipe-img' alt="" /> </td>
+                                <img src={'https://upskilling-egypt.com:3006/' + recipe.imagePath} className='recipe-img' alt="" /> </td>
                                 : <td> <img src={noImg} className='recipe-img' alt="" /> </td>}
 
                             <td>{recipe.price} L.E </td>
